@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resources - FluxxNova Foundation</title>
     <link rel="icon" type="image/jpeg" href="assets/images/logo.jpeg">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Font Awesome (primary CDN + fallback) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.0/css/all.min.css" onerror="this.remove();" />
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -46,7 +48,8 @@
                 <h2>Browse by Category</h2>
                 <div class="grid grid-3">
                     <div class="card">
-                        <h4>📊 Annual Reports</h4>
+                        <div class="card-icon icon-purple"><i class="fa-solid fa-chart-pie" aria-hidden="true"></i></div>
+                        <h4>Annual Reports</h4>
                         <p>Comprehensive reports detailing our annual activities, impact metrics, financial transparency, and strategic direction.</p>
                         <ul style="list-style: none; padding: 0; margin-top: 1rem; background: rgba(255, 255, 255, 0.9); border-radius: 8px; padding: 1rem; border: 1px solid rgba(181, 238, 203, 0.3); box-shadow: 0 2px 10px rgba(181, 238, 203, 0.1);">
                             <li style="margin-bottom: 0.8rem; color: #2c3e50; font-weight: 400;">• Annual Report 2024</li>
@@ -56,7 +59,8 @@
                     </div>
                     
                     <div class="card">
-                        <h4>📚 Educational Guides</h4>
+                        <div class="card-icon icon-green"><i class="fa-solid fa-book-open" aria-hidden="true"></i></div>
+                        <h4>Educational Guides</h4>
                         <p>Practical guides and manuals for implementing community development programs and best practices.</p>
                         <ul style="list-style: none; padding: 0; margin-top: 1rem; background: rgba(255, 255, 255, 0.9); border-radius: 8px; padding: 1rem; border: 1px solid rgba(203, 199, 252, 0.3); box-shadow: 0 2px 10px rgba(203, 199, 252, 0.1);">
                             <li style="margin-bottom: 0.8rem; color: #2c3e50; font-weight: 400;">• Financial Literacy Handbook</li>
@@ -66,7 +70,8 @@
                     </div>
                     
                     <div class="card">
-                        <h4>🔬 Research Studies</h4>
+                        <div class="card-icon icon-yellow"><i class="fa-solid fa-microscope" aria-hidden="true"></i></div>
+                        <h4>Research Studies</h4>
                         <p>In-depth studies and research findings on rural development, women's empowerment, and community impact.</p>
                         <ul style="list-style: none; padding: 0; margin-top: 1rem; background: rgba(255, 255, 255, 0.9); border-radius: 8px; padding: 1rem; border: 1px solid rgba(252, 236, 165, 0.3); box-shadow: 0 2px 10px rgba(252, 236, 165, 0.1);">
                             <li style="margin-bottom: 0.8rem; color: #2c3e50; font-weight: 400;">• Women's Economic Empowerment Study</li>
@@ -84,7 +89,8 @@
                 <h2>Featured Resources</h2>
                 <div class="grid grid-2">
                     <div class="card">
-                        <h4>📖 Complete Financial Literacy Handbook</h4>
+                        <div class="card-icon icon-red"><i class="fa-solid fa-book" aria-hidden="true"></i></div>
+                        <h4>Complete Financial Literacy Handbook</h4>
                         <p style="color: #666; margin-bottom: 1rem;">Updated: January 2025 | 156 pages | PDF</p>
                         <p>A comprehensive guide covering all aspects of financial literacy training, from basic banking concepts to advanced investment principles. Includes practical exercises, case studies, and culturally appropriate examples for rural communities.</p>
                         <p><strong>Contents include:</strong></p>
@@ -99,7 +105,8 @@
                     </div>
                     
                     <div class="card">
-                        <h4>📈 Annual Impact Report 2024</h4>
+                        <div class="card-icon icon-purple"><i class="fa-solid fa-chart-line" aria-hidden="true"></i></div>
+                        <h4>Annual Impact Report 2024</h4>
                         <p style="color: #666; margin-bottom: 1rem;">Published: December 2024 | 89 pages | PDF</p>
                         <p>Our most comprehensive annual report showcasing the transformative impact of our programs across 50 communities. Features detailed metrics, success stories, financial transparency, and strategic direction for 2025.</p>
                         <p><strong>Key highlights:</strong></p>
@@ -126,16 +133,19 @@
                     <h3>Skill Development & Livelihood</h3>
                     <div class="grid grid-3">
                         <div class="card">
+                            <div class="card-icon icon-green"><i class="fa-solid fa-toolbox" aria-hidden="true"></i></div>
                             <h4>Vocational Training Modules</h4>
                             <p>Comprehensive training materials for various vocational skills including tailoring, computer operations, and food processing.</p>
                             <a href="#" class="btn btn-primary">Download</a>
                         </div>
                         <div class="card">
+                            <div class="card-icon icon-yellow"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></div>
                             <h4>Entrepreneurship Toolkit</h4>
                             <p>Step-by-step guide for starting and managing small businesses, including business plan templates and market analysis tools.</p>
                             <a href="#" class="btn btn-secondary">Download</a>
                         </div>
                         <div class="card">
+                            <div class="card-icon icon-purple"><i class="fa-solid fa-store" aria-hidden="true"></i></div>
                             <h4>Market Linkage Directory</h4>
                             <p>Comprehensive directory of potential buyers, suppliers, and market opportunities for rural entrepreneurs.</p>
                             <a href="#" class="btn btn-tertiary">Download</a>
@@ -148,16 +158,19 @@
                     <h3>Education for All</h3>
                     <div class="grid grid-3">
                         <div class="card">
+                            <div class="card-icon icon-red"><i class="fa-solid fa-book-open-reader" aria-hidden="true"></i></div>
                             <h4>Adult Literacy Curriculum</h4>
                             <p>Structured curriculum for adult literacy programs, designed for rural contexts with practical applications.</p>
                             <a href="#" class="btn btn-quaternary">Download</a>
                         </div>
                         <div class="card">
+                            <div class="card-icon icon-green"><i class="fa-solid fa-user-graduate" aria-hidden="true"></i></div>
                             <h4>Girls' Education Strategy Guide</h4>
                             <p>Proven strategies and interventions for increasing girls' enrollment, retention, and completion in education.</p>
                             <a href="#" class="btn btn-quinary">Download</a>
                         </div>
                         <div class="card">
+                            <div class="card-icon icon-yellow"><i class="fa-solid fa-people-roof" aria-hidden="true"></i></div>
                             <h4>Parent Engagement Handbook</h4>
                             <p>Tools and techniques for involving parents and communities in children's education and school management.</p>
                             <a href="#" class="btn btn-primary">Download</a>
@@ -170,16 +183,19 @@
                     <h3>Healthcare & Wellness</h3>
                     <div class="grid grid-3">
                         <div class="card">
+                            <div class="card-icon icon-purple"><i class="fa-solid fa-user-nurse" aria-hidden="true"></i></div>
                             <h4>Community Health Worker Manual</h4>
                             <p>Training manual for community health workers covering primary healthcare, maternal health, and health promotion.</p>
                             <a href="#" class="btn btn-secondary">Download</a>
                         </div>
                         <div class="card">
+                            <div class="card-icon icon-red"><i class="fa-solid fa-apple-whole" aria-hidden="true"></i></div>
                             <h4>Nutrition Education Guide</h4>
                             <p>Comprehensive guide for promoting good nutrition practices and addressing malnutrition in rural communities.</p>
                             <a href="#" class="btn btn-tertiary">Download</a>
                         </div>
                         <div class="card">
+                            <div class="card-icon icon-green"><i class="fa-solid fa-ribbon" aria-hidden="true"></i></div>
                             <h4>Health Awareness Campaign Kit</h4>
                             <p>Ready-to-use materials for conducting health awareness campaigns including posters, presentations, and activity guides.</p>
                             <a href="#" class="btn btn-quaternary">Download</a>
@@ -219,7 +235,8 @@
                 <h2>Tools & Templates</h2>
                 <div class="grid grid-3">
                     <div class="card">
-                        <h4>🛠️ Implementation Tools</h4>
+                        <div class="card-icon icon-yellow"><i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i></div>
+                        <h4>Implementation Tools</h4>
                         <ul style="list-style: none; padding: 0;">
                             <li style="margin-bottom: 0.5rem;">• Project Planning Template</li>
                             <li style="margin-bottom: 0.5rem;">• Community Needs Assessment Tool</li>
@@ -230,7 +247,8 @@
                     </div>
                     
                     <div class="card">
-                        <h4>📋 Monitoring & Evaluation</h4>
+                        <div class="card-icon icon-purple"><i class="fa-solid fa-clipboard-check" aria-hidden="true"></i></div>
+                        <h4>Monitoring & Evaluation</h4>
                         <ul style="list-style: none; padding: 0;">
                             <li style="margin-bottom: 0.5rem;">• M&E Framework Guide</li>
                             <li style="margin-bottom: 0.5rem;">• Data Collection Templates</li>
@@ -241,7 +259,8 @@
                     </div>
                     
                     <div class="card">
-                        <h4>💼 Training Materials</h4>
+                        <div class="card-icon icon-red"><i class="fa-solid fa-briefcase" aria-hidden="true"></i></div>
+                        <h4>Training Materials</h4>
                         <ul style="list-style: none; padding: 0;">
                             <li style="margin-bottom: 0.5rem;">• Trainer's Guide Templates</li>
                             <li style="margin-bottom: 0.5rem;">• Presentation Templates</li>

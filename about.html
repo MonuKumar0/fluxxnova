@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - FluxxNova Foundation</title>
     <link rel="icon" type="image/jpeg" href="assets/images/logo.jpeg">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Font Awesome (primary CDN + fallback) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.0/css/all.min.css" onerror="this.remove();" />
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -52,6 +54,7 @@
                     </div>
                     <div>
                         <div class="card">
+                            <div class="card-icon icon-green"><i class="fa-solid fa-signature" aria-hidden="true"></i></div>
                             <h4>Our Name</h4>
                             <p><strong>Fluxx:</strong> Represents continuous growth, adaptability, and the dynamic nature of positive change.</p>
                             <p><strong>Nova:</strong> Symbolizes new hope, bright beginnings, and the transformative power of opportunity.</p>
@@ -66,12 +69,14 @@
             <div class="container">
                 <div class="grid grid-2">
                     <div class="card">
+                        <div class="card-icon icon-purple"><i class="fa-solid fa-earth-asia" aria-hidden="true"></i></div>
                         <h3>Our Vision</h3>
                         <p style="font-size: 1.2rem; line-height: 1.8; color: #2c3e50; font-weight: 400;">
                             A world where every individual, regardless of background or circumstance, has equal access to opportunity, dignity, and a sustainable future.
                         </p>
                     </div>
                     <div class="card">
+                        <div class="card-icon icon-red"><i class="fa-solid fa-bullseye" aria-hidden="true"></i></div>
                         <h3>Our Mission</h3>
                         <p style="font-size: 1.2rem; line-height: 1.8; color: #2c3e50; font-weight: 400;">
                             To empower communities through inclusive education, skill development, women's empowerment, financial literacy, healthcare, and sustainable livelihoods, while fostering resilience, equity, and holistic growth.
@@ -87,26 +92,32 @@
                 <h2>Our Core Values</h2>
                 <div class="grid grid-3">
                     <div class="card">
+                        <div class="card-icon icon-yellow"><i class="fa-solid fa-hands-holding-circle" aria-hidden="true"></i></div>
                         <h4>Empowerment</h4>
                         <p>We believe in building capacity and confidence within communities, enabling them to take ownership of their development and create lasting change.</p>
                     </div>
                     <div class="card">
+                        <div class="card-icon icon-green"><i class="fa-solid fa-leaf" aria-hidden="true"></i></div>
                         <h4>Sustainability</h4>
                         <p>Our programs are designed for long-term impact, ensuring that the benefits continue to grow and spread within communities over time.</p>
                     </div>
                     <div class="card">
+                        <div class="card-icon icon-purple"><i class="fa-solid fa-scale-balanced" aria-hidden="true"></i></div>
                         <h4>Integrity</h4>
                         <p>We operate with transparency, accountability, and ethical practices in all our interactions and program implementations.</p>
                     </div>
                     <div class="card">
+                        <div class="card-icon icon-red"><i class="fa-solid fa-people-group" aria-hidden="true"></i></div>
                         <h4>Inclusivity</h4>
                         <p>We ensure that our programs reach all members of the community, with special attention to marginalized and underserved populations.</p>
                     </div>
                     <div class="card">
+                        <div class="card-icon icon-yellow"><i class="fa-solid fa-handshake" aria-hidden="true"></i></div>
                         <h4>Collaboration</h4>
                         <p>We work closely with local communities, partners, and stakeholders to create solutions that are culturally appropriate and community-driven.</p>
                     </div>
                     <div class="card">
+                        <div class="card-icon icon-green"><i class="fa-solid fa-diagram-project" aria-hidden="true"></i></div>
                         <h4>Holistic Approach</h4>
                         <p>We address multiple aspects of community development simultaneously, recognizing the interconnected nature of social challenges.</p>
                     </div>
@@ -134,6 +145,7 @@
                 </div>
                 <div style="margin-top: 2rem;">
                     <div class="card">
+                        <div class="card-icon icon-purple"><i class="fa-solid fa-person-dress" aria-hidden="true"></i></div>
                         <h4>Focus on Women's Empowerment</h4>
                         <p style="font-size: 1.1rem; line-height: 1.7;">
                             Recognizing that empowering women creates a ripple effect throughout families and communities, we place special emphasis on programs that support women's education, economic participation, health, and leadership development.
