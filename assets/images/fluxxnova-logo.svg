@@ -1,0 +1,26 @@
+<svg width="180" height="60" viewBox="0 0 180 60" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3498db;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#9b59b6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2c3e50;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle for the icon -->
+  <circle cx="30" cy="30" r="25" fill="url(#logoGradient)" opacity="0.9"/>
+  
+  <!-- Stylized "F" icon representing foundation/future -->
+  <path d="M20 18 L40 18 L40 22 L25 22 L25 28 L37 28 L37 32 L25 32 L25 42 L20 42 Z" fill="white"/>
+  
+  <!-- Modern accent line -->
+  <rect x="35" y="35" width="8" height="3" fill="white" opacity="0.8"/>
+  
+  <!-- Text -->
+  <text x="65" y="25" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">
+    FluxxNova
+  </text>
+  <text x="65" y="42" font-family="Arial, sans-serif" font-size="10" fill="white" opacity="0.9">
+    Foundation
+  </text>
+</svg>
