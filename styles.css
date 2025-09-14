@@ -20,7 +20,7 @@ body {
     position: relative;
 }
 
-/* Card Icon Styles (moved outside body block) */
+/* Card Icon Styles (updated for contrast: neutral background + colored borders/icons) */
 .card-icon {
     width: 56px;
     height: 56px;
@@ -33,17 +33,47 @@ body {
     margin: 0 0 0.75rem;
     box-shadow: 0 4px 12px rgba(0,0,0,0.12);
     backdrop-filter: blur(6px);
+    background: rgba(255,255,255,0.9); /* neutral so it never blends with card color */
+    border: 2px solid transparent;
 }
-.card-icon i { color: #222; }
 
-/* Color variants mapped to existing palette */
-.icon-purple { background: linear-gradient(135deg,#bdb2ff,#d9d3ff); }
-.icon-yellow { background: linear-gradient(135deg,#fdffb6,#fffeca); }
-.icon-green  { background: linear-gradient(135deg,#caffbf,#e6ffdf); }
-.icon-red    { background: linear-gradient(135deg,#ffadad,#ffc7c7); }
+/* Variant borders + (for non-card contexts) colored backgrounds */
+.icon-purple { border-color:#bdb2ff; background: linear-gradient(135deg,#bdb2ff,#d9d3ff); }
+.icon-yellow { border-color:#fdffb6; background: linear-gradient(135deg,#fdffb6,#fff9d1); }
+.icon-green  { border-color:#caffbf; background: linear-gradient(135deg,#caffbf,#e6ffd5); }
+.icon-red    { border-color:#ffadad; background: linear-gradient(135deg,#ffadad,#ffc5c5); }
+
+/* Accessible darker glyph colors for contrast on white */
+.icon-purple i { color:#5a4fb5; }
+.icon-yellow i { color:#a08f00; }
+.icon-green  i { color:#268c3c; }
+.icon-red    i { color:#c44141; }
+
+/* Fallback if no variant class present */
+.card-icon i { color:#222; }
 
 /* Slight hover lift for icons within cards */
 .card:hover .card-icon { transform: translateY(-3px); transition: transform .25s ease; }
+
+/* Contrasting colored icon backgrounds (rotate palette so icon never matches card) */
+/* Section cards (opaque versions) */
+.section .card:nth-child(1) .card-icon { background: linear-gradient(135deg,#fdffb6,#fff9d1); border-color:#fdffb6; }
+.section .card:nth-child(2) .card-icon { background: linear-gradient(135deg,#caffbf,#e6ffd5); border-color:#caffbf; }
+.section .card:nth-child(3) .card-icon { background: linear-gradient(135deg,#ffadad,#ffc5c5); border-color:#ffadad; }
+.section .card:nth-child(4) .card-icon { background: linear-gradient(135deg,#bdb2ff,#d7cfff); border-color:#bdb2ff; }
+.section .card:nth-child(5) .card-icon { background: linear-gradient(135deg,#fdffb6,#fff9d1); border-color:#fdffb6; }
+.section .card:nth-child(6) .card-icon { background: linear-gradient(135deg,#caffbf,#e6ffd5); border-color:#caffbf; }
+
+/* Transparent / generic cards outside .section (still rotate independently) */
+.card:nth-child(1) .card-icon { background: linear-gradient(135deg,#ffadad,#ffc5c5); border-color:#ffadad; }
+.card:nth-child(2) .card-icon { background: linear-gradient(135deg,#bdb2ff,#d7cfff); border-color:#bdb2ff; }
+.card:nth-child(3) .card-icon { background: linear-gradient(135deg,#fdffb6,#fff9d1); border-color:#fdffb6; }
+.card:nth-child(4) .card-icon { background: linear-gradient(135deg,#caffbf,#e6ffd5); border-color:#caffbf; }
+.card:nth-child(5) .card-icon { background: linear-gradient(135deg,#ffadad,#ffc5c5); border-color:#ffadad; }
+.card:nth-child(6) .card-icon { background: linear-gradient(135deg,#bdb2ff,#d7cfff); border-color:#bdb2ff; }
+
+/* Ensure glyphs stay readable over the new colored backgrounds INSIDE rotated card rules */
+/* (Leave earlier variant-specific glyph colors intact) */
 
 body::before {
     content: '';
@@ -655,7 +685,7 @@ main {
 .section .card:hover {
     transform: translateY(-8px);
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-    filter: brightness(1.1);
+    /* Removed brightness filter to preserve icon colors */
 }
 
 .section .card:nth-child(1):hover {
