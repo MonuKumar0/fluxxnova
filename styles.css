@@ -15,6 +15,7 @@ body {
     color: #333;
     background: 
         url('assets/images/subtle-background.svg') center center / cover no-repeat fixed,
+        url('assets/images/pexels-kavya-kodiya-515709-3381571.jpg') center center / cover no-repeat fixed,
         url('assets/images/foundation-background.png') center center / cover no-repeat fixed,
         linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
     background-attachment: fixed;
@@ -29,9 +30,10 @@ body::before {
     width: 100%;
     height: 100%;
     background-image: 
-        radial-gradient(circle at 25% 25%, rgba(52, 152, 219, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 75% 75%, rgba(155, 89, 182, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 50% 50%, rgba(46, 204, 113, 0.05) 0%, transparent 50%);
+        radial-gradient(circle at 25% 25%, rgba(52, 152, 219, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 75% 75%, rgba(155, 89, 182, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(46, 204, 113, 0.03) 0%, transparent 50%),
+        linear-gradient(45deg, rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0.01) 100%);
     pointer-events: none;
     z-index: -1;
 }
@@ -161,9 +163,10 @@ main {
 /* Hero Section */
 .hero {
     background: 
-        linear-gradient(135deg, rgba(102, 126, 234, 0.9) 0%, rgba(118, 75, 162, 0.9) 50%, rgba(240, 147, 251, 0.9) 100%),
+        linear-gradient(135deg, rgba(102, 126, 234, 0.8) 0%, rgba(118, 75, 162, 0.8) 50%, rgba(240, 147, 251, 0.7) 100%),
+        url('assets/images/pexels-kavya-kodiya-515709-3381571.jpg') center center / cover no-repeat,
         url('assets/images/foundation-background.png') center center / cover no-repeat;
-    background-size: 200% 200%, cover;
+    background-size: 200% 200%, cover, cover;
     animation: heroGradient 10s ease infinite;
     color: #fff;
     padding: 4rem 0;
@@ -502,11 +505,11 @@ footer {
 @media (max-width: 768px) {
     /* Optimize background for tablet and mobile */
     body {
-        background-size: auto, 50%, cover;
+        background-size: auto, 50%, 60%, cover;
     }
     
     .hero {
-        background-size: 200% 200%, 60%;
+        background-size: 200% 200%, 60%, 70%;
     }
     
     nav {
@@ -571,11 +574,11 @@ footer {
 @media (max-width: 480px) {
     /* Further optimize background for small mobile devices */
     body {
-        background-size: auto, 30%, cover;
+        background-size: auto, 30%, 40%, cover;
     }
     
     .hero {
-        background-size: 200% 200%, 40%;
+        background-size: 200% 200%, 40%, 50%;
     }
     
     nav {
