@@ -291,6 +291,34 @@ main {
     box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
 }
 
+/* Social Media Button Specific Styling */
+.social-btn {
+    background: linear-gradient(135deg, #3498db, #2980b9) !important;
+    color: #fff !important;
+    border: none !important;
+    padding: 12px 20px;
+    margin: 0.5rem;
+    border-radius: 25px;
+    text-decoration: none !important;
+    font-weight: 500;
+    font-size: 1rem;
+    display: inline-flex !important;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+    min-width: 120px;
+    justify-content: center;
+}
+
+.social-btn:hover {
+    background: linear-gradient(135deg, #2980b9, #21618c) !important;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(52, 152, 219, 0.4);
+    color: #fff !important;
+    text-decoration: none !important;
+}
+
 /* Section Styles */
 .section {
     padding: 4rem 0;
