@@ -246,10 +246,10 @@ main {
     animation: fadeInUp 1s ease-out;
     position: relative;
     z-index: 1;
-    color: #ffffff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    color: #2c3e50;
+    text-shadow: none;
     text-align: center;
-    background: rgba(0, 0, 0, 0.5);
+    background: linear-gradient(135deg,#b5eecb,#caffbf);
     padding: 1rem 2rem;
     border-radius: 0;
     display: block;
@@ -260,6 +260,8 @@ main {
     margin-left: -50vw;
     margin-right: -50vw;
     margin-bottom: 2rem;
+    border-top: 1px solid rgba(0,0,0,0.05);
+    border-bottom: 1px solid rgba(0,0,0,0.08);
 }
 
 @keyframes fadeInUp {
@@ -278,11 +280,11 @@ main {
     line-height: 1.6;
     position: relative;
     z-index: 1;
-    color: #ffffff;
+    color: #2c3e50;
     font-weight: 500;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    text-shadow: none;
     text-align: center;
-    background: rgba(0, 0, 0, 0.5);
+    background: linear-gradient(135deg,#bdb2ff,#cbc7fc);
     padding: 0.8rem 2rem;
     border-radius: 0;
     display: flex;
@@ -297,6 +299,8 @@ main {
     margin-right: -50vw;
     margin-top: 0;
     margin-bottom: 1.5rem;
+    border-top: 1px solid rgba(0,0,0,0.05);
+    border-bottom: 1px solid rgba(0,0,0,0.08);
 }
 
 /* (Removed earlier wrapped hero-tagline variant; full-width version below) */
@@ -317,11 +321,11 @@ main {
     position:absolute;
     inset:0;
     border-radius:16px;
-    padding:2px;
+    color: #2c3e50;
     background:linear-gradient(135deg,#bdb2ff,#caffbf,#ffadad,#fdffb6);
-    -webkit-mask:linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    mask:linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
+    text-shadow: none;
+    text-align: center;
+    background: linear-gradient(135deg,#fdffb6,#fceca5);
             mask-composite: exclude;
     opacity:.85;
 }
@@ -336,6 +340,8 @@ main {
 }
 
 .hero-tagline {
+    border-top: 1px solid rgba(0,0,0,0.05);
+    border-bottom: 1px solid rgba(0,0,0,0.08);
     font-size: 1.5rem;
     line-height: 1.6;
     position: relative;
