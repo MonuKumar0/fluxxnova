@@ -129,14 +129,14 @@ nav {
 .nav-menu a {
     color: #2c3e50;
     text-decoration: none;
-    padding: 0.8rem 1.2rem;
-    border-radius: 20px;
+    padding: 0.6rem 1rem;
+    border-radius: 4px;
     transition: all 0.3s ease;
     font-weight: 500;
     display: block;
     white-space: nowrap;
     position: relative;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     background: rgba(255, 255, 255, 0.6);
     border: 1px solid transparent;
 }
@@ -199,8 +199,16 @@ main {
     position: relative;
     z-index: 1;
     color: #ffffff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
     text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    display: block;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
 }
 
 @keyframes fadeInUp {
@@ -242,8 +250,12 @@ main {
     z-index: 1;
     color: #ffffff;
     font-weight: 600;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
     text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    display: inline-block;
 }
 
 /* Professional Buttons */
@@ -339,9 +351,71 @@ main {
     font-size: 2.5rem;
     text-align: center;
     margin-bottom: 3rem;
-    color: #2c3e50;
+    color: #ffffff;
     position: relative;
     animation: fadeInUp 0.8s ease-out;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    display: block;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Override for sections with light backgrounds - use dark text */
+.section div[style*="background-color: #f8f9fa"] h2 {
+    color: #2c3e50;
+    text-shadow: none;
+    background: transparent;
+    padding: 0;
+}
+
+/* Override for sections with white container backgrounds - use simple dark text */
+.section .container h2 {
+    color: #2c3e50 !important;
+    text-shadow: none !important;
+    background: transparent !important;
+    padding: 0 !important;
+    margin-bottom: 3rem !important;
+}
+
+/* Override for sections with white backgrounds - use dark text */
+.section[style*="background: rgba(255, 255, 255"] h2 {
+    color: #2c3e50 !important;
+    text-shadow: none !important;
+    background: transparent !important;
+    padding: 0 !important;
+}
+
+.section[style*="background: rgba(255, 255, 255"] h3 {
+    color: #2c3e50 !important;
+    text-shadow: none !important;
+    background: transparent !important;
+    padding: 0 !important;
+    display: block !important;
+}
+
+.section[style*="background: rgba(255, 255, 255"] h4:not(.card h4) {
+    color: #2c3e50 !important;
+    text-shadow: none !important;
+    background: transparent !important;
+    padding: 0 !important;
+    display: block !important;
+}
+
+.section[style*="background: rgba(255, 255, 255"] p:not(.card p) {
+    color: #2c3e50 !important;
+    text-shadow: none !important;
+}
+
+/* Override for verticals section with light background */
+.section.verticals h2 {
+    color: #2c3e50 !important;
+    text-shadow: none !important;
+    background: transparent !important;
+    padding: 0 !important;
 }
 
 .section h2::after {
@@ -359,7 +433,100 @@ main {
 .section h3 {
     font-size: 1.8rem;
     margin-bottom: 1rem;
-    color: #34495e;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Override for sections with light backgrounds - use dark text */
+.section div[style*="background-color: #f8f9fa"] h3 {
+    color: #2c3e50;
+    text-shadow: none;
+}
+
+/* Section h4 headings that appear over background */
+.section h4:not(.card h4) {
+    color: #ffffff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+/* Override for sections with light backgrounds - use dark text */
+.section div[style*="background-color: #f8f9fa"] h4 {
+    color: #2c3e50;
+    text-shadow: none;
+}
+
+/* Give content sections a subtle background overlay for better readability */
+.section .container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 3rem 2rem;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* Override section text to use dark colors when container has background */
+.section .container h2,
+.section .container h3,
+.section .container h4 {
+    color: #2c3e50 !important;
+    text-shadow: none !important;
+}
+
+/* Override only paragraphs and lists that don't have inline color styles */
+.section .container p:not([style*="color"]):not(.card p),
+.section .container li:not([style*="color"]) {
+    color: #2c3e50 !important;
+    text-shadow: none !important;
+}
+
+/* Ensure white text override doesn't apply to elements in white containers */
+.section .container p[style*="color: #666"] {
+    color: #666 !important;
+    text-shadow: none !important;
+    background: transparent !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    backdrop-filter: none !important;
+}
+
+/* Section paragraphs that appear over background */
+.section p:not(.card p) {
+    color: #ffffff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+/* Override inline color styles for better visibility over background images */
+.section p[style*="color: #666"] {
+    color: #ffffff !important;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8) !important;
+    background: rgba(0, 0, 0, 0.4) !important;
+    padding: 1rem 1.5rem !important;
+    border-radius: 8px !important;
+    backdrop-filter: blur(3px) !important;
+}
+
+/* Override for paragraphs that already have their own white/light backgrounds */
+.section p[style*="background: rgba(255, 255, 255"] {
+    color: #2c3e50 !important;
+    text-shadow: none !important;
+}
+
+/* Override for sections with light backgrounds - use dark text */
+.section div[style*="background-color: #f8f9fa"] p {
+    color: #2c3e50;
+    text-shadow: none;
+}
+
+/* Section lists that appear over background */
+.section ul:not(.card ul) li {
+    color: #ffffff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+/* Override for sections with light backgrounds - use dark text */
+.section div[style*="background-color: #f8f9fa"] ul li {
+    color: #2c3e50;
+    text-shadow: none;
 }
 
 /* Grid Layouts */
@@ -371,6 +538,8 @@ main {
 
 .grid-3 {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    align-items: stretch;
+    align-content: stretch;
 }
 
 .grid-2 {
@@ -397,40 +566,57 @@ main {
 
 /* Cards that should be opaque (not transparent) over background images */
 .section .card {
-    background: #b5eecb; /* Default light green */
-    border: 1px solid rgba(181, 238, 203, 0.8);
+    background: #bdb2ff; /* Light purple */
+    border: 1px solid rgba(189, 178, 255, 0.8);
+    color: #2c3e50;
+}
+
+/* Add more spacing between manually stacked cards (apply class 'stacked-cards' to parent) */
+.stacked-cards > .card + .card {
+    margin-top: 2rem;
+}
+
+/* Ensure grid cards never inherit unintended top margins */
+.grid.grid-3 > .card, .grid.grid-2 > .card {
+    margin-top: 0 !important;
+}
+
+/* Override general card styles for verticals - ensure bright colors */
+.verticals .card {
+    background: #bdb2ff; /* Light purple by default */
+    border: 1px solid rgba(189, 178, 255, 0.8);
     color: #2c3e50;
 }
 
 /* Different colored cards for sections over background */
 .section .card:nth-child(1) {
-    background: #b5eecb; /* Light green */
-    border-color: rgba(181, 238, 203, 0.8);
+    background: #bdb2ff; /* Light purple */
+    border-color: rgba(189, 178, 255, 0.8);
 }
 
 .section .card:nth-child(2) {
-    background: #fceca5; /* Light yellow */
-    border-color: rgba(252, 236, 165, 0.8);
+    background: #fdffb6; /* Light yellow */
+    border-color: rgba(253, 255, 182, 0.8);
 }
 
 .section .card:nth-child(3) {
-    background: #cbc7fc; /* Light purple */
-    border-color: rgba(203, 199, 252, 0.8);
+    background: #caffbf; /* Light green */
+    border-color: rgba(202, 255, 191, 0.8);
 }
 
 .section .card:nth-child(4) {
-    background: #fec8a7; /* Light orange */
-    border-color: rgba(254, 200, 167, 0.8);
+    background: #ffadad; /* Light pink */
+    border-color: rgba(255, 173, 173, 0.8);
 }
 
 .section .card:nth-child(5) {
-    background: #b5eecb; /* Light green - cycle back */
-    border-color: rgba(181, 238, 203, 0.8);
+    background: #bdb2ff; /* Light purple - cycle back */
+    border-color: rgba(189, 178, 255, 0.8);
 }
 
 .section .card:nth-child(6) {
-    background: #fceca5; /* Light yellow - cycle back */
-    border-color: rgba(252, 236, 165, 0.8);
+    background: #fdffb6; /* Light yellow - cycle back */
+    border-color: rgba(253, 255, 182, 0.8);
 }
 
 .card:hover {
@@ -448,27 +634,27 @@ main {
 }
 
 .section .card:nth-child(1):hover {
-    background: #a8e6bd; /* Slightly darker light green */
+    background: #ffffff !important; /* White on hover */
 }
 
 .section .card:nth-child(2):hover {
-    background: #fae697; /* Slightly darker light yellow */
+    background: #ffffff !important; /* White on hover */
 }
 
 .section .card:nth-child(3):hover {
-    background: #bfb9fa; /* Slightly darker light purple */
+    background: #ffffff !important; /* White on hover */
 }
 
 .section .card:nth-child(4):hover {
-    background: #fdbf99; /* Slightly darker light orange */
+    background: #ffffff !important; /* White on hover */
 }
 
 .section .card:nth-child(5):hover {
-    background: #a8e6bd; /* Slightly darker light green */
+    background: #ffffff !important; /* White on hover */
 }
 
 .section .card:nth-child(6):hover {
-    background: #fae697; /* Slightly darker light yellow */
+    background: #ffffff !important; /* White on hover */
 }
 
 /* Card text styling for readability */
@@ -490,7 +676,37 @@ main {
 /* Card content wrapper for flex alignment */
 .card .btn {
     margin-top: auto;
-    align-self: flex-start;
+    align-self: center;
+    text-align: center;
+}
+
+/* Ensure perfect alignment for grid-3 cards */
+.grid-3 .card {
+    height: 100%;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 0;
+    align-self: stretch;
+    position: relative;
+}
+
+.grid-3 .card h4 {
+    margin-bottom: 1rem;
+    flex-shrink: 0;
+    margin-top: 0;
+}
+
+.grid-3 .card p {
+    flex-grow: 1;
+    margin-bottom: 1.5rem;
+    margin-top: 0;
+}
+
+.grid-3 .card .btn {
+    margin-top: auto;
+    flex-shrink: 0;
 }
 
 /* Different colored cards (transparent versions for non-section cards) */
@@ -539,6 +755,66 @@ main {
     border-bottom: 1px solid rgba(181, 238, 203, 0.3);
 }
 
+/* Override card hover behavior for verticals section */
+.verticals .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    filter: none; /* Remove brightness filter */
+    /* Keep the same background colors as default state */
+}
+
+/* Default bright colors for verticals cards */
+.verticals .grid .card:nth-child(1) {
+    background: #bdb2ff !important; /* Light purple */
+    border-color: rgba(189, 178, 255, 0.8) !important;
+}
+
+.verticals .grid .card:nth-child(2) {
+    background: #fdffb6 !important; /* Light yellow */
+    border-color: rgba(253, 255, 182, 0.8) !important;
+}
+
+.verticals .grid .card:nth-child(3) {
+    background: #caffbf !important; /* Light green */
+    border-color: rgba(202, 255, 191, 0.8) !important;
+}
+
+.verticals .grid .card:nth-child(4) {
+    background: #ffadad !important; /* Light pink */
+    border-color: rgba(255, 173, 173, 0.8) !important;
+}
+
+.verticals .grid .card:nth-child(5) {
+    background: #bdb2ff !important; /* Light purple */
+    border-color: rgba(189, 178, 255, 0.8) !important;
+}
+
+/* Hover states for verticals cards (white background on hover) */
+.verticals .grid .card:nth-child(1):hover {
+    background: #ffffff !important; /* White on hover */
+    border-color: rgba(189, 178, 255, 0.8) !important;
+}
+
+.verticals .grid .card:nth-child(2):hover {
+    background: #ffffff !important; /* White on hover */
+    border-color: rgba(253, 255, 182, 0.8) !important;
+}
+
+.verticals .grid .card:nth-child(3):hover {
+    background: #ffffff !important; /* White on hover */
+    border-color: rgba(202, 255, 191, 0.8) !important;
+}
+
+.verticals .grid .card:nth-child(4):hover {
+    background: #ffffff !important; /* White on hover */
+    border-color: rgba(255, 173, 173, 0.8) !important;
+}
+
+.verticals .grid .card:nth-child(5):hover {
+    background: #ffffff !important; /* White on hover */
+    border-color: rgba(189, 178, 255, 0.8) !important;
+}
+
 .vertical-item {
     text-align: center;
     padding: 1.5rem;
@@ -547,7 +823,7 @@ main {
 .vertical-icon {
     width: 70px;
     height: 70px;
-    background: #fceca5;
+    background: #fae697; /* Bright yellow by default */
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -555,16 +831,16 @@ main {
     margin: 0 auto 1.5rem;
     color: #2c3e50;
     font-size: 1.8rem;
-    box-shadow: 0 6px 20px rgba(181, 238, 203, 0.2);
+    box-shadow: 0 6px 20px rgba(250, 230, 151, 0.3);
     transition: all 0.3s ease;
-    border: 2px solid rgba(181, 238, 203, 0.4);
+    border: 2px solid rgba(250, 230, 151, 0.6);
 }
 
 .vertical-icon:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(181, 238, 203, 0.3);
-    background: #cbc7fc;
-    border-color: rgba(181, 238, 203, 0.6);
+    box-shadow: 0 10px 25px rgba(250, 230, 151, 0.4);
+    background: #fae697; /* Keep same bright yellow */
+    border-color: rgba(250, 230, 151, 0.8);
 }
 
 /* Professional Footer */
@@ -668,8 +944,9 @@ footer {
     }
     
     .nav-menu a {
-        padding: 0.5rem 0.7rem;
-        font-size: 0.9rem;
+        padding: 0.4rem 0.7rem;
+        font-size: 0.85rem;
+        border-radius: 3px;
     }
 }
 
@@ -683,8 +960,9 @@ footer {
     }
     
     .nav-menu a {
-        padding: 0.4rem 0.6rem;
-        font-size: 0.85rem;
+        padding: 0.3rem 0.5rem;
+        font-size: 0.8rem;
+        border-radius: 3px;
     }
     
     .logo {
