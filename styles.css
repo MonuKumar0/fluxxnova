@@ -1,14 +1,6 @@
 /* Reset and Base Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
@@ -20,7 +12,7 @@ body {
     position: relative;
 }
 
-/* Card Icon Styles (updated for contrast: neutral background + colored borders/icons) */
+/* Card Icon Styles (restored) */
 .card-icon {
     width: 56px;
     height: 56px;
@@ -37,6 +29,7 @@ body {
     border: 2px solid transparent;
 }
 
+/* (Removed earlier constrained hero-intro block; full-width version defined later) */
 /* Variant borders + (for non-card contexts) colored backgrounds */
 .icon-purple { border-color:#bdb2ff; background: linear-gradient(135deg,#bdb2ff,#d9d3ff); }
 .icon-yellow { border-color:#fdffb6; background: linear-gradient(135deg,#fdffb6,#fff9d1); }
@@ -258,11 +251,14 @@ main {
     text-align: center;
     background: rgba(0, 0, 0, 0.5);
     padding: 1rem 2rem;
-    border-radius: 12px;
+    border-radius: 0;
     display: block;
-    width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
     margin-bottom: 2rem;
 }
 
@@ -278,28 +274,69 @@ main {
 }
 
 .hero-intro {
-    font-size: 1.2rem;
-    max-width: 900px;
-    margin: 0 auto 3rem;
-    line-height: 1.8;
-    animation: fadeInUp 1s ease-out 0.3s both;
+    font-size: 1.25rem;
+    line-height: 1.6;
     position: relative;
     z-index: 1;
-    color: #34495e;
-    font-weight: 400;
-    padding: 2rem;
-    background: rgba(255, 255, 255, 0.92);
-    backdrop-filter: blur(8px);
-    border-radius: 15px;
-    border: 2px solid rgba(181, 238, 203, 0.4);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    color: #ffffff;
+    font-weight: 500;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 0.8rem 2rem;
+    border-radius: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    max-width: none;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+/* (Removed earlier wrapped hero-tagline variant; full-width version below) */
+.hero-stat {
+    background:rgba(255,255,255,0.85);
+    backdrop-filter:blur(6px);
+    border:2px solid rgba(203,199,252,0.5);
+    border-radius:18px;
+    padding:.9rem 1.25rem;
+    min-width:160px;
+    text-align:left;
+    position:relative;
+    box-shadow:0 4px 15px rgba(0,0,0,0.12);
+    transition:all .3s ease;
+}
+.hero-stat:before {
+    content:"";
+    position:absolute;
+    inset:0;
+    border-radius:16px;
+    padding:2px;
+    background:linear-gradient(135deg,#bdb2ff,#caffbf,#ffadad,#fdffb6);
+    -webkit-mask:linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask:linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+    opacity:.85;
+}
+.hero-stat:hover { transform:translateY(-6px) scale(1.03); box-shadow:0 10px 25px rgba(0,0,0,0.18); }
+.hero-stat h5 { margin:0 0 .25rem; font-size:.85rem; letter-spacing:.5px; text-transform:uppercase; color:#555; font-weight:600; }
+.hero-stat .value { font-size:1.55rem; font-weight:700; line-height:1.1; background:linear-gradient(135deg,#6a5acd,#ff7f50); -webkit-background-clip:text; background-clip:text; color:transparent; }
+.hero-stat .sub { font-size:.7rem; font-weight:500; letter-spacing:.5px; color:#666; }
+
+@media (max-width:640px){
+  .hero-stat { min-width:46%; padding:.8rem 1rem; }
+  .hero-stat .value { font-size:1.35rem; }
 }
 
 .hero-tagline {
     font-size: 1.5rem;
-    max-width: 700px;
-    margin: 0 auto 1.5rem;
     line-height: 1.6;
     position: relative;
     z-index: 1;
@@ -308,9 +345,20 @@ main {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
     text-align: center;
     background: rgba(0, 0, 0, 0.5);
-    padding: 0.8rem 1.5rem;
-    border-radius: 8px;
-    display: inline-block;
+    padding: 0.8rem 2rem;
+    border-radius: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    max-width: none;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
 }
 
 /* Professional Buttons */
@@ -965,6 +1013,28 @@ footer {
 
 /* Provide subtle hover emphasis without changing official brand hue */
 .social-btn:hover i { filter: brightness(1.1); }
+
+/* Impact metric number complementary colors */
+.impact-metric { font-size:3rem; font-weight:700; margin-bottom:1rem; }
+.impact-blue { color:#1f5f85; }    /* complements light purple card */
+.impact-crimson { color:#a83232; }  /* complements light red/pink card */
+.impact-forest { color:#1d7a3d; }   /* complements light green card */
+.impact-amber { color:#b06d00; }    /* complements light yellow card */
+.impact-violet { color:#6a2c91; }   /* complements lighter lavender/purple */
+.impact-teal { color:#138272; }     /* complements aqua/green variant */
+
+/* Slight text-shadow for readability on very light backgrounds */
+.impact-metric { text-shadow: 0 1px 2px rgba(0,0,0,0.08); }
+
+/* Leading emoji styling for paragraphs without card icons */
+.emoji-lead { display:inline-flex; align-items:center; gap:.5rem; }
+.emoji-lead .emoji { font-size:1.9rem; line-height:1; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15)); }
+.emoji-theme-earth { background:linear-gradient(135deg,#bdb2ff,#caffbf); -webkit-background-clip:text; background-clip:text; color:transparent; }
+
+/* Fallback for systems not rendering gradient clip */
+@supports not (-webkit-background-clip:text) {
+    .emoji-theme-earth { color:#6a5acd; background:none; }
+}
 
 .footer-bottom {
     text-align: center;
