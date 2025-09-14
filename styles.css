@@ -956,6 +956,16 @@ footer {
     color: #2c3e50;
 }
 
+/* Social media brand icon colors (used in contact page social buttons) */
+.brand-facebook i { color:#1877F2; }
+.brand-twitter i { color:#1DA1F2; }
+.brand-linkedin i { color:#0A66C2; }
+.brand-instagram i { color:#E4405F; }
+.brand-youtube i { color:#FF0000; }
+
+/* Provide subtle hover emphasis without changing official brand hue */
+.social-btn:hover i { filter: brightness(1.1); }
+
 .footer-bottom {
     text-align: center;
     padding-top: 2rem;
