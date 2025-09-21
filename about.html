@@ -5,7 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - FluxxNova Foundation</title>
     <link rel="icon" type="image/jpeg" href="assets/images/logo.jpeg">
-    <!-- Font Awesome (primary CDN + fallback) -->
+    <!-- Font Awesome (primary CDN + fallback)
+        Note: We include two CSS links on purpose.
+        - Primary: cdnjs pinned to v6.5.0
+        - Fallback: jsDelivr package @fortawesome/fontawesome-free@6.5.0
+        If the primary CDN fails or is blocked, the fallback ensures icons still render.
+        Keep both in sync when upgrading Font Awesome. -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.0/css/all.min.css" onerror="this.remove();" />
     <link rel="stylesheet" href="styles.css">
@@ -17,6 +22,8 @@
                 <img src="assets/images/logo.jpeg" alt="FluxxNova Foundation Logo" class="logo-image">
                 <span class="logo-text">FluxxNova Foundation</span>
             </a>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
+            <label for="nav-toggle" class="hamburger" aria-hidden="true"><span></span></label>
             <ul class="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html" class="active">About Us</a></li>
@@ -189,10 +196,10 @@
             <div class="footer-section">
                 <h4>Connect With Us</h4>
                 <ul>
-                    <li><a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i> Facebook</a></li>
-                    <li><a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i> Twitter</a></li>
-                    <li><a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i> LinkedIn</a></li>
-                    <li><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    <li><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i> Facebook</a></li>
+                    <li><a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i> Twitter</a></li>
+                    <li><a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a></li>
+                    <li><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
                 </ul>
             </div>
         </div>
