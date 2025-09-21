@@ -1093,6 +1093,36 @@ footer {
     font-weight: 500;
 }
 
+/* Utility: responsive inline subscribe row */
+.subscribe-inline {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.subscribe-inline input[type="email"],
+.subscribe-inline input[type="text"],
+.subscribe-inline input[type="tel"] {
+    flex: 1 1 220px;
+    min-width: 0; /* allow shrink to avoid overflow */
+}
+
+/* Utility: social buttons row wrap */
+.social-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+@media (max-width: 480px) {
+  .subscribe-inline {
+      gap: 0.5rem;
+  }
+  .subscribe-inline .btn {
+      width: 100%;
+  }
+}
+
 /* Responsive Design */
 @media (max-width: 1200px) {
     nav {
@@ -1271,7 +1301,7 @@ footer {
         border-radius: 20px;
         padding: 12px 24px;
         font-size: 0.9rem;
-        width: 100%;
+        width: auto; /* Avoid forcing full-width; prevents overflow in inline rows */
         margin: 0.3rem 0;
     }
     
